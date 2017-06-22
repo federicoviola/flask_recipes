@@ -1,10 +1,15 @@
-# run.py
+#################
+#### imports ####
+#################
  
- # Add your settings here... this is a temporary location, as the settings for a Flask app
- # should be stored separate from your main program.
-DEBUG = True
-  
-from app import app
-   
-if __name__ == "__main__":
-   app.run()
+from flask import Flask
+ 
+ 
+################
+#### config ####
+################
+ 
+app = Flask(__name__, instance_relative_config=True)
+app.config.from_pyfile('flask.cfg')
+ 
+from . import views

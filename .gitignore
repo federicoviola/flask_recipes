@@ -8,3 +8,7 @@ __pycache__/
   
 # PyCharm files
 .idea/
+
+# Instance Folder - used for configuration parameters
+/instance
+
